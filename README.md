@@ -33,11 +33,17 @@ Several neural network models were built and evaluated based on Recall, as minim
 
 ## Models Developed
 **0. Model 0 (Initial Model):** A simple neural network with one hidden layer (7 neurons) and ReLU activation, using SGD optimizer. Achieved a validation recall of ~0.72 for the failure class.
+
 **1. Model 1:** Added another hidden layer (14 and 7 neurons) with ReLU activation, using SGD optimizer. Improved validation recall to ~0.78 for the failure class, but showed signs of overfitting.
+
 **2. Model 2:** Introduced a Dropout layer (0.5) after the first hidden layer in Model 1 architecture to mitigate overfitting, using SGD. This model significantly reduced recall, suggesting that regularization with a high dropout rate was not beneficial.
+
 **3. Model 3:**  Reintroduced Dropout (0.5) and incorporated class weights (cw_dict = {0: 1.06, 1: 18.03}) to address class imbalance, using SGD. This model achieved a validation recall of ~0.86 for the failure class, showing improvement due to class weighting.
+
 **4. Model 4:**  Used the architecture of Model 1 (two hidden layers, no dropout) but switched the optimizer to Adam. This model showed excellent performance with a validation recall of ~0.87 for the failure class, without apparent overfitting.
+
 **5. Model 5:** Combined Model 4's architecture with a Dropout layer (0.5) and Adam optimizer, without class weights. The recall dropped significantly, confirming that dropout was not beneficial for this dataset with the Adam optimizer.
+
 **6. Model 6:** Combined Model 4's architecture with Dropout (0.5) and Adam optimizer, along with class weights. This model performed poorly.
 
 ## Model Performance Comparison
