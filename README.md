@@ -16,7 +16,7 @@ False Positives (FP): Predicted failures that do not occur (inspection costs, lo
 Objective
 To develop, tune, and select the best classification model that accurately predicts wind turbine generator failures, focusing on maximizing recall for the 'failure' class.
 
-## Data Description
+## 📘 Data Description
 Train.csv: Used for model training and tuning (20,000 observations).
 
 Test.csv: Used for final model performance evaluation (5,000 observations).
@@ -61,7 +61,7 @@ Several neural network models were built and evaluated based on Recall, as minim
 
 **Final Model Selection:** Model 4, with its high recall, precision, and F1-score on both training and validation sets, was selected as the best model. It effectively identifies failures without significantly over-predicting.
 
-## Test Set Performance for the Best Model (Model 4)
+## 📌 Test Set Performance for the Best Model (Model 4)
 Accuracy: 0.9904
 Recall: 0.9266
 Precision: 0.9816
