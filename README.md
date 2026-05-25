@@ -49,16 +49,6 @@ Several neural network models were built and evaluated based on Recall, as minim
 ## Model Performance Comparison
 <center> <img src="data/ReneWind.jpg" alt="ReneWind" width="700"></center>
 
-Metric	Model 0	Model 1	Model 2	Model 3	Model 4	Model 5	Model 6
-Accuracy (Train)	0.9831	0.9859	0.9647	0.9765	0.9936	0.9815	0.9592
-Recall (Train)	0.8666	0.8913	0.6883	0.9344	0.9480	0.8375	0.9320
-Precision (Train)	0.9668	0.9704	0.9639	0.8671	0.9904	0.9845	0.7900
-F1 Score (Train)	0.9099	0.9268	0.7620	0.8975	0.9681	0.8963	0.8441
-Accuracy (Val)	0.9812	0.9854	0.9628	0.9714	0.9910	0.9836	0.9552
-Recall (Val)	0.8563	0.8890	0.6773	0.9205	0.9326	0.8610	0.9153
-Precision (Val)	0.9567	0.9674	0.9487	0.8437	0.9800	0.9798	0.7775
-F1 Score (Val)	0.8995	0.9242	0.7481	0.8776	0.9549	0.9110	0.8298
-
 Final Model Selection: Model 4, with its high recall, precision, and F1-score on both training and validation sets, was selected as the best model. It effectively identifies failures without significantly over-predicting.
 
 ## Test Set Performance for the Best Model (Model 4)
