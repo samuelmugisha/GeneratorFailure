@@ -49,7 +49,7 @@ Several neural network models were built and evaluated based on Recall, as minim
 ## Model Performance Comparison
 <center> <img src="data/ReneWind.jpg" alt="ReneWind" width="700"></center>
 
-Final Model Selection: Model 4, with its high recall, precision, and F1-score on both training and validation sets, was selected as the best model. It effectively identifies failures without significantly over-predicting.
+**Final Model Selection:** Model 4, with its high recall, precision, and F1-score on both training and validation sets, was selected as the best model. It effectively identifies failures without significantly over-predicting.
 
 ## Test Set Performance for the Best Model (Model 4)
 Accuracy: 0.9904
