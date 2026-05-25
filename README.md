@@ -47,6 +47,8 @@ Several neural network models were built and evaluated based on Recall, as minim
 **6. Model 6:** Combined Model 4's architecture with Dropout (0.5) and Adam optimizer, along with class weights. This model performed poorly.
 
 ## Model Performance Comparison
+<center> <img src="data/ReneWind.jpg" alt="ReneWind" width="500"></center>
+
 Metric	Model 0	Model 1	Model 2	Model 3	Model 4	Model 5	Model 6
 Accuracy (Train)	0.9831	0.9859	0.9647	0.9765	0.9936	0.9815	0.9592
 Recall (Train)	0.8666	0.8913	0.6883	0.9344	0.9480	0.8375	0.9320
