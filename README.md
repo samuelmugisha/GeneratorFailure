@@ -23,7 +23,7 @@ Test.csv: Used for final model performance evaluation (5,000 observations).
 
 Both datasets contain 40 numerical predictor variables (V1-V40) and 1 target variable (Target).
 
-**📊 Data Overview and Preprocessing**
+**Data Overview and Preprocessing**
 **Shape:** Training data: (20000, 41); Test data: (5000, 41).
 
 **Data Types:** All predictor variables are float64, and the Target variable was converted to float64 for consistency.
@@ -41,7 +41,7 @@ Both datasets contain 40 numerical predictor variables (V1-V40) and 1 target var
 **⚙️ Model Building and Evaluation**
 Several neural network models were built and evaluated based on Recall, as minimizing false negatives (undetected failures) is critical due to higher replacement costs.
 
-## Models Developed
+## 📊 Models Developed
 **0. Model 0 (Initial Model):** A simple neural network with one hidden layer (7 neurons) and ReLU activation, using SGD optimizer. Achieved a validation recall of ~0.72 for the failure class.
 
 **1. Model 1:** Added another hidden layer (14 and 7 neurons) with ReLU activation, using SGD optimizer. Improved validation recall to ~0.78 for the failure class, but showed signs of overfitting.
