@@ -18,17 +18,20 @@ To develop, tune, and select the best classification model that accurately predi
 
 ## Data Description
 Train.csv: Used for model training and tuning (20,000 observations).
+
 Test.csv: Used for final model performance evaluation (5,000 observations).
+
 Both datasets contain 40 numerical predictor variables (V1-V40) and 1 target variable (Target).
-Data Overview and Preprocessing
-Shape: Training data: (20000, 41); Test data: (5000, 41).
-Data Types: All predictor variables are float64, and the Target variable was converted to float64 for consistency.
-Duplicate Values: No duplicate values found in the training data.
-Missing Values: Small percentages of missing values were found in V1 and V2 for both train and test sets (around 0.09% - 0.12%). These were imputed using the median strategy to prevent data leakage during model training.
-Statistical Summary: Variables range between approximately -25 and 25. Outliers were observed but were considered inherent to the data rather than errors.
-Target Variable Distribution: The target variable is imbalanced, with approximately 5.5% representing 'failure' (1) and 94.5% representing 'no failure' (0) in both training and test sets.
-Correlation Check: Variables V23 to V33 showed higher correlation among themselves.
-Model Building and Evaluation
+
+**Data Overview and Preprocessing**
+**Shape:** Training data: (20000, 41); Test data: (5000, 41).
+**Data Types:** All predictor variables are float64, and the Target variable was converted to float64 for consistency.
+**Duplicate Values:** No duplicate values found in the training data.
+**Missing Values:** Small percentages of missing values were found in V1 and V2 for both train and test sets (around 0.09% - 0.12%). These were imputed using the median strategy to prevent data leakage during model training.
+**Statistical Summary:** Variables range between approximately -25 and 25. Outliers were observed but were considered inherent to the data rather than errors.
+**Target Variable Distribution:** The target variable is imbalanced, with approximately 5.5% representing 'failure' (1) and 94.5% representing 'no failure' (0) in both training and test sets.
+**Correlation Check:** Variables V23 to V33 showed higher correlation among themselves.
+**Model Building and Evaluation**
 Several neural network models were built and evaluated based on Recall, as minimizing false negatives (undetected failures) is critical due to higher replacement costs.
 
 ## Models Developed
