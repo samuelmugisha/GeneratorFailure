@@ -31,7 +31,7 @@ Correlation Check: Variables V23 to V33 showed higher correlation among themselv
 Model Building and Evaluation
 Several neural network models were built and evaluated based on Recall, as minimizing false negatives (undetected failures) is critical due to higher replacement costs.
 
-## Models Developed:
+## Models Developed
 0. Model 0 (Initial Model): A simple neural network with one hidden layer (7 neurons) and ReLU activation, using SGD optimizer. Achieved a validation recall of ~0.72 for the failure class.
 1. Model 1: Added another hidden layer (14 and 7 neurons) with ReLU activation, using SGD optimizer. Improved validation recall to ~0.78 for the failure class, but showed signs of overfitting.
 2. Model 2: Introduced a Dropout layer (0.5) after the first hidden layer in Model 1 architecture to mitigate overfitting, using SGD. This model significantly reduced recall, suggesting that regularization with a high dropout rate was not beneficial.
