@@ -50,6 +50,7 @@ Accuracy (Val)	0.9812	0.9854	0.9628	0.9714	0.9910	0.9836	0.9552
 Recall (Val)	0.8563	0.8890	0.6773	0.9205	0.9326	0.8610	0.9153
 Precision (Val)	0.9567	0.9674	0.9487	0.8437	0.9800	0.9798	0.7775
 F1 Score (Val)	0.8995	0.9242	0.7481	0.8776	0.9549	0.9110	0.8298
+
 Final Model Selection: Model 4, with its high recall, precision, and F1-score on both training and validation sets, was selected as the best model. It effectively identifies failures without significantly over-predicting.
 
 ## Test Set Performance for the Best Model (Model 4)
