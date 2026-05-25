@@ -1,13 +1,13 @@
-# GeneratorFailure
+# 🎯GeneratorFailure
 Predictor generator failures so that generators are repaired before failing/breaking. Reduce the overall maintenance cost.
 
-## Project Overview
+## 🧩Project Overview
 This notebook details the process of building and evaluating machine learning models to predict generator failures in wind turbines. The objective is to help "ReneWind" minimize maintenance costs by enabling predictive maintenance.
 
-## Problem Statement
+## 🚨Problem Statement
 Renewable energy, particularly wind energy, requires efficient operation and maintenance. Predictive maintenance, using sensor data to anticipate component degradation, can significantly reduce costs. This project aims to predict wind turbine generator failures to facilitate timely repairs and avoid costly replacements.
 
-## Business Context
+## 🧠 Business Context
 "ReneWind" has provided a ciphered dataset containing 40 predictor variables and a target variable indicating generator failure (1) or no failure (0). The cost implications are crucial:
 
 True Positives (TP): Correctly predicted failures (repair costs).
@@ -23,7 +23,7 @@ Test.csv: Used for final model performance evaluation (5,000 observations).
 
 Both datasets contain 40 numerical predictor variables (V1-V40) and 1 target variable (Target).
 
-**Data Overview and Preprocessing**
+**📊 Data Overview and Preprocessing**
 **Shape:** Training data: (20000, 41); Test data: (5000, 41).
 
 **Data Types:** All predictor variables are float64, and the Target variable was converted to float64 for consistency.
@@ -38,7 +38,7 @@ Both datasets contain 40 numerical predictor variables (V1-V40) and 1 target var
 
 **Correlation Check:** Variables V23 to V33 showed higher correlation among themselves.
 
-**Model Building and Evaluation**
+**⚙️ Model Building and Evaluation**
 Several neural network models were built and evaluated based on Recall, as minimizing false negatives (undetected failures) is critical due to higher replacement costs.
 
 ## Models Developed
@@ -56,7 +56,7 @@ Several neural network models were built and evaluated based on Recall, as minim
 
 **6. Model 6:** Combined Model 4's architecture with Dropout (0.5) and Adam optimizer, along with class weights. This model performed poorly.
 
-## Model Performance Comparison
+## 📈Model Performance Comparison
 <center> <img src="data/ReneWind.jpg" alt="ReneWind" width="700"></center>
 
 **Final Model Selection:** Model 4, with its high recall, precision, and F1-score on both training and validation sets, was selected as the best model. It effectively identifies failures without significantly over-predicting.
@@ -83,7 +83,7 @@ False Positives (FP): 7
 False Negatives (FN): 41
 True Positives (TP): 241
 
-## Actionable Insights and Recommendations
+## 🔑 Actionable Insights and Recommendations
 
 - Removing Dropout Layers: Using dropout layers, especially with 50% dropout, significantly reduced model performance. The model generalized better without dropout in this scenario.
 - Moderate Success in Detecting Failures (TP): The model correctly predicted 241 true failures out of 282 total actual failures (TP + FN), resulting in a recall of approximately 85.5% for failures. This significantly reduces replacement costs by enabling preemptive repairs, but there is still room for improvement.
@@ -91,7 +91,7 @@ Relatively Low False Positives (FP): With only 7 false positives, the inspection
 - Model Performance: The best model (Model 4) achieves a recall of 93% overall and approximately 85% on the 'failure' class, with high precision and F1-scores.
 
 
-## Business Recommendations
+## 📌 Business Recommendations
 - Focus on Reducing False Negatives (FN): The 41 undetected failures still pose a risk of incurring higher replacement costs. Future efforts should explore techniques such as incorporating additional predictive features, advanced feature engineering, or ensemble modeling to further improve recall for the 'failure' class.
 - Implement Predictive Maintenance Protocols: Utilize the model's predictions to establish a tiered maintenance strategy. Prioritize immediate repairs for generators predicted to fail. For non-failure predictions, scheduled routine inspections can validate model accuracy and inform future iterations.
 - Monitor Cost Trade-offs and Update Models Regularly: Continuously assess the balance between inspection, repair, and replacement costs. Regularly update the model with new sensor data to ensure its adaptability to evolving equipment performance and environmental conditions, thereby maintaining accuracy and optimizing cost savings.
