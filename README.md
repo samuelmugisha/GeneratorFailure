@@ -1,4 +1,4 @@
-# 🎯GeneratorFailure
+# 🎯Generator Failure Prediction
 Predict generator failures so that generators are repaired before failing/breaking. Reduce the overall maintenance cost.
 
 ## 🧩Project Overview
