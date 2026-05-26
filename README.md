@@ -1,5 +1,5 @@
 # 🎯GeneratorFailure
-Predictor generator failures so that generators are repaired before failing/breaking. Reduce the overall maintenance cost.
+Predict generator failures so that generators are repaired before failing/breaking. Reduce the overall maintenance cost.
 
 ## 🧩Project Overview
 This notebook details the process of building and evaluating machine learning models to predict generator failures in wind turbines. The objective is to help "ReneWind" minimize maintenance costs by enabling predictive maintenance.
